@@ -1,0 +1,32 @@
+/*---mother----------------------------*/
+header, main, footer {
+  font-family: 'News Cycle', sans-serif;
+  width: 100%;
+  margin: auto;
+}
+/*---mother----------------------------*/
+
+
+/*---header----------------------------*/
+#header-container {
+  width: 1000px;
+  margin: auto;
+}
+header h1, header nav, header ul, header li {
+  display: inline-block;
+}
+/*---header----------------------------*/
+
+/*---main----------------------------*/
+section {
+  width: 1000px;
+  margin: auto;
+}
+/*---main----------------------------*/
+
+/*---footer----------------------------*/
+footer p {
+  width: 1000px;
+  margin: auto;
+}
+/*---footer----------------------------*/
