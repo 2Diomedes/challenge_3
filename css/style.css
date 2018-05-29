@@ -11,7 +11,7 @@ header, main, footer {
 
 /*---header----------------------------*/
 #header-container {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   padding-top: 2em;
 }
@@ -47,7 +47,7 @@ header li a:hover{
 section {
   color: white;
   text-align: center;
-  padding: 100px;
+  padding: 8%;
 }
 
 section h2{
@@ -65,10 +65,11 @@ section p{
   font-size: 1em;
   line-height: 2em;
   margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 .workbench {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -80,7 +81,7 @@ section:nth-child(1){
 
 }
 section:nth-child(1) figure{
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 section:nth-child(1) figure img{
@@ -104,27 +105,26 @@ section:nth-child(3){
   background-color: #27AE61;
 }
 
-section input {
+.btn {
   font-size: 1.2em;
-  height: 3.6em;
-  width: 14em;
+  padding: 0.7em 3em;
   text-transform: uppercase;
   border: none;
   border-radius: 8px;
-  margin-top: 3em;
+  text-decoration: none;
 }
 
-section:nth-child(1) input {
+section:nth-child(1) .btn {
   color: #eeeeee;
   background-color: #2B3F48;
 }
 
-section:nth-child(2) input {
+section:nth-child(2) .btn {
   color: #eeeeee;
   background-color: #27AE61;
 }
 
-section:nth-child(3) input {
+section:nth-child(3) .btn {
   color: #27AE61;
   background-color: #eeeeee;
 }
@@ -146,7 +146,7 @@ footer {
 }
 footer p {
   color: #656565;
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -160,3 +160,27 @@ footer p a {
   text-decoration: none;
 }
 /*---footer----------------------------*/
+
+/*---Responsive----------------------------*/
+
+@media screen and (max-width: 500px)
+{
+  figure {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.35em 1.5em;
+  }
+  header li {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 1em;
+  }
+  #header-container {
+    padding-top: 0.5em;
+    text-align: center;
+  }
+}
+
+/*---Responsive----------------------------*/
