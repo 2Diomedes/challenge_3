@@ -149,7 +149,7 @@ section:nth-child(4) input {
   height: 1.5em;
 }
 
-section:nth-child(4) input::placeholder {
+section:nth-child(4) input::placeholder, section:nth-child(4) textarea::placeholder {
   color: #27ae61;
 }
 
@@ -244,20 +244,25 @@ footer p a {
   section h2 {
     font-size: 2.5em;
   }
+  #submit{
+    padding: 0.7em 1em;
+  }
 }
-
 /*---Responsive tablette----------------------------*/
 
 /*---Responsive mobile----------------------------*/
+@media screen and (max-width: 650px) {
+  section:nth-child(4) input, section:nth-child(4) label, section:nth-child(4) textarea {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
+  section:nth-child(4) label {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 550px) {
-  figure {
-    width: 100%;
-  }
-  .btn {
-    width: 100%;
-    padding: 0.35em 1.5em;
-  }
   header li {
     padding-top: 2%;
     padding-left: 2%;
@@ -266,6 +271,13 @@ footer p a {
   nav {
     padding-top: 0.5em;
     text-align: center;
+  }
+  figure {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.35em 1.5em;
   }
   section h2 {
     font-size: 1.5em;
@@ -279,23 +291,8 @@ footer p a {
   header {
     min-height: 125px;
   }
-}
-
-@media screen and (max-width: 300px) {
   nav li {
     width: 41%;
   }
 }
-
-@media screen and (max-width: 650px) {
-  section:nth-child(4) input, section:nth-child(4) label, section:nth-child(4) textarea {
-    display: block;
-    width: 90%;
-    margin: 5px auto;
-  }
-  section:nth-child(4) label {
-    display: none;
-  }
-}
-
 /*---Responsive----------------------------*/
