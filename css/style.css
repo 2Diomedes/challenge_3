@@ -29,9 +29,14 @@ header h1 {
   font-size: 2em;
   font-weight: bold;
 }
+header h1 a{
+  text-decoration: none;
+  color: #2B3F48;
+}
 header li {
   text-transform: uppercase;
-  padding-right: 2em;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 header li a {
   text-decoration: none;
@@ -86,9 +91,11 @@ section:nth-child(1) figure{
 }
 section:nth-child(1) figure img{
   border-radius: 50%;
-  padding: 1.3em;
-  width: 160px;
-  height: 160px;
+  padding: 2%;
+  max-width: 160px;
+  max-height: 160px;
+  width: 28%;
+  height: 28%;
 }
 section:nth-child(2){
   background-color: #eeeeee;
@@ -142,7 +149,6 @@ section:nth-child(3) a {
 /*---footer----------------------------*/
 footer {
   background-color: #eeeeee;
-
 }
 footer p {
   color: #656565;
@@ -153,6 +159,7 @@ footer p {
   text-align: center;
   letter-spacing: 0.2em;
   padding: 7em 0 7.5em 0;
+  margin: 0 8%;
 }
 
 footer p a {
@@ -161,9 +168,21 @@ footer p a {
 }
 /*---footer----------------------------*/
 
-/*---Responsive----------------------------*/
+/*---Responsive tablette----------------------------*/
+@media screen and (max-width: 1080px)
+{
+  h1{
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  section h2 {
+    font-size: 2.5em;
+  }
+}
+/*---Responsive tablette----------------------------*/
 
-@media screen and (max-width: 500px)
+/*---Responsive mobile----------------------------*/
+@media screen and (max-width: 550px)
 {
   figure {
     width: 100%;
@@ -180,6 +199,26 @@ footer p a {
   #header-container {
     padding-top: 0.5em;
     text-align: center;
+  }
+  section h2 {
+    font-size: 1.5em;
+  }
+  section h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 300px)
+{
+  header{
+    min-height: 125px;
+  }
+}
+
+@media screen and (max-width: 300px)
+{
+  nav li {
+    width: 41%;
   }
 }
 
