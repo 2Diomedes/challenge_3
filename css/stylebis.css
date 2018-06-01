@@ -9,27 +9,26 @@ header, main, footer {
 /*---mother----------------------------*/
 
 /*---header----------------------------*/
-header {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  background-color: #eeeeee;
-  color: #2B3F48;
-  height: 90px;
-  max-height: 90px;
-}
+
 nav {
+  max-width: 1000px;
   margin: auto;
+  padding-top: 2em;
+}
+
+header h1, header ul, header li {
+  display: inline-block;
+  color: #2B3F48;
+}
+
+header {
+  background-color: #eeeeee;
+  max-height: 115px;
+  min-height: 115px;
 }
 
 header h1 {
-  position: relative;
-  z-index: 1;
-  background-color: #eeeeee;
-  padding: 0.5em 0;
-  display: block;
-  text-align: center;
-  padding: 0.1em;
+  width: 45%;
   font-size: 2em;
   font-weight: bold;
 }
@@ -39,40 +38,13 @@ header h1 a {
   color: #2B3F48;
 }
 
-i.fas.fa-bars{
-  position: absolute;
-  font-size: 2em;
-  padding-left: 0.5em;
-}
-
-header ul {
-  height: 50px;
-}
-
-header ul li.nav_icon {
-  position: relative;
-  z-index: 1;
-  background-color: #eeeeee;
-  width: 100%;
-}
-
-header ul li.nav_link {
-  position: relative;
-  z-index: 0;
-  background-color: #eeeeee;
-  transform: translateY(-190px);
-  transition: all 1s ease-in-out;
-  height: 1.5em;
+header li {
   text-transform: uppercase;
   padding-right: 1em;
   padding-left: 1em;
 }
 
-header ul:hover li.nav_link {
-  transform: translateY(35px);
-}
-
-header ul li a {
+header li a {
   text-decoration: none;
   color: #2B3F48;
 }
@@ -84,9 +56,7 @@ header li a:hover {
 /*---header----------------------------*/
 
 /*---main----------------------------*/
-main {
-  margin-top: 90px;
-}
+
 section {
   color: white;
   text-align: center;
@@ -94,13 +64,13 @@ section {
 }
 
 section h2 {
-  font-size: 1.5em;
+  font-size: 3em;
   margin-top: 1em;
   font-weight: bold;
 }
 
 section h3 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin-top: 1.2em;
 }
 
@@ -163,15 +133,13 @@ section form {
   border-radius: 10px;
 }
 
-section:nth-child(4) input, section:nth-child(4) label, section:nth-child(4) textarea {
-  margin: 5px auto;
-}
-section:nth-child(4) label {
-  display: none;
+section:nth-child(4) input, section:nth-child(4) label {
+  display: inline-block;
+  width: 20.5%;
+  margin: 1% 0;
 }
 
 section:nth-child(4) input, textarea {
-  width: 90%;
   background: #eeeeee;
   border-radius: 4px;
   border: none;
@@ -186,6 +154,7 @@ section:nth-child(4) input::placeholder, section:nth-child(4) textarea::placehol
 }
 
 section:nth-child(4) textarea {
+  width: 65%;
   height: 200px;
 }
 
@@ -208,8 +177,7 @@ label[for="about"] {
 
 .btn {
   font-size: 1.2em;
-  width: 100%;
-  padding: 0.35em 1.5em;
+  padding: 0.7em 3em;
   text-transform: uppercase;
   border: none;
   border-radius: 8px;
@@ -264,56 +232,67 @@ footer p a {
   text-decoration: none;
 }
 
-
 /*---footer----------------------------*/
 
+/*---Responsive tablette----------------------------*/
 
-/*---Responsive----------------------------*/
+@media screen and (max-width: 1080px) {
+  h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  section h2 {
+    font-size: 2.5em;
+  }
+  #submit{
+    padding: 0.7em 1em;
+  }
+}
+/*---Responsive tablette----------------------------*/
 
-@media screen and (min-width: 1024px) {
-  main {
-    margin-top: 0px;
+/*---Responsive mobile----------------------------*/
+@media screen and (max-width: 650px) {
+  section:nth-child(4) input, section:nth-child(4) label, section:nth-child(4) textarea {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
   }
-  header{
-    position: relative;
-  }
-  header h1, header ul, header li {
-    display: inline-block;
-  }
-  header h1 {
-    width: 34%;
-    text-align: left;
-  }
-  li.nav_icon{
+  section:nth-child(4) label {
     display: none;
-  }
-  header ul li.nav_link {
-    transform: translateY(0px);
-
-    position: relative;
-    z-index: 0;
-    background-color: rgba(255, 255, 255, 0);
-    transition: all 1s ease-in-out;
-    height: 1em;
-    text-transform: uppercase;
-    /* padding-right: 1em; */
-    /* padding-left: 1em; */
-  }
-  header ul:hover li.nav_link {
-    transform: translateY(0px);
-  }
-  nav {
-    max-width: 1000px;
-    margin: auto;
-    padding-top: 2em;
   }
 }
 
+@media screen and (max-width: 550px) {
+  header li {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 1em;
+  }
+  nav {
+    padding-top: 0.5em;
+    text-align: center;
+  }
+  figure {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.35em 1.5em;
+  }
+  section h2 {
+    font-size: 1.5em;
+  }
+  section h3 {
+    font-size: 1.3em;
+  }
+}
 
-
-
-
-
-
-
-/*---Responsive----------------------------
+@media screen and (max-width: 300px) {
+  header {
+    min-height: 125px;
+  }
+  nav li {
+    width: 41%;
+  }
+}
+/*---Responsive----------------------------*/
