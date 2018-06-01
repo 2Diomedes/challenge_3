@@ -1,5 +1,5 @@
 == Exercice 3 : Intégration "Pastime" ==
-
+ttttt
 Pour cette exercice, vous avez uniquement une maquette sans les mesures.
 
 Vous devez donc effectuer les mesures vous-mêmes à l'aide de Gimp et de son outil "mesure". La maquette étant en 100% vous aurez exactement la taille de vos blocs et élements.

@@ -283,6 +283,7 @@ footer p a {
   header h1 {
     width: 34%;
     text-align: left;
+    font-size: 2em;
   }
   li.nav_icon{
     display: none;
@@ -296,8 +297,6 @@ footer p a {
     transition: all 1s ease-in-out;
     height: 1em;
     text-transform: uppercase;
-    /* padding-right: 1em; */
-    /* padding-left: 1em; */
   }
   header ul:hover li.nav_link {
     transform: translateY(0px);
@@ -307,6 +306,23 @@ footer p a {
     margin: auto;
     padding-top: 2em;
   }
+  section h2 {
+    font-size: 3em;
+  }
+  section h3 {
+    font-size: 1.5em;
+  }
+  .btn {
+    padding: 0.7em 3em;
+  }
+  section:nth-child(4) input, section:nth-child(4) label {
+    display: inline-block;
+    width: 20.5%;
+  }
+  footer p {
+      margin: auto;
+  }
+
 }
 
 
