@@ -11,7 +11,7 @@ header, main, footer {
 /*---header----------------------------*/
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   top: 0;
   background-color: #eeeeee;
   color: #2B3F48;
@@ -24,7 +24,7 @@ nav {
 
 header h1 {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-color: #eeeeee;
   padding: 0.5em 0;
   display: block;
@@ -40,6 +40,9 @@ header h1 a {
 }
 
 i.fas.fa-bars{
+  background-color: #eeeeee;
+  width: 100%;
+  height: 1.6em;
   position: absolute;
   font-size: 2em;
   padding-left: 0.5em;
@@ -47,11 +50,12 @@ i.fas.fa-bars{
 
 header ul {
   height: 50px;
+  background-color: #eeeeee;
 }
 
 header ul li.nav_icon {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-color: #eeeeee;
   width: 100%;
 }
@@ -124,8 +128,8 @@ section:nth-child(1) {
 }
 
 section:nth-child(1) figure {
-  width: 100%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 section:nth-child(1) figure img {
@@ -133,8 +137,6 @@ section:nth-child(1) figure img {
   padding: 2%;
   max-width: 160px;
   max-height: 160px;
-  width: 28%;
-  height: 28%;
 }
 
 section:nth-child(2) {
@@ -157,9 +159,15 @@ section:nth-child(4) {
   background: #2b3f48;
 }
 
+section:nth-child(4) legend{
+  text-transform: uppercase;
+  font-size: 1.8em;
+  padding: 0.5em 0;
+}
+
 section form {
   background: #27ae61;
-  padding: 2% 0;
+  padding: 2em 0;
   border-radius: 10px;
 }
 
@@ -277,8 +285,15 @@ footer p a {
   header{
     position: relative;
   }
-  header h1, header ul, header li {
-    display: inline-block;
+  header nav {
+    display: flex;
+  }
+  header ul {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
   }
   header h1 {
     width: 34%;
@@ -290,7 +305,6 @@ footer p a {
   }
   header ul li.nav_link {
     transform: translateY(0px);
-
     position: relative;
     z-index: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -315,9 +329,30 @@ footer p a {
   .btn {
     padding: 0.7em 3em;
   }
+
+  section:nth-child(4) fieldset:nth-child(1){
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  section:nth-child(4) fieldset:nth-child(1) input, section:nth-child(4) fieldset:nth-child(1) label{
+    margin: 0.3em 0;
+    padding: 0;
+  }
+
+  section:nth-child(4) fieldset:nth-child(1) label{
+    width: 17%;
+  }
+
+  section:nth-child(4) fieldset:nth-child(1) input{
+    width: 30%;
+  }
+
   section:nth-child(4) input, section:nth-child(4) label {
-    display: inline-block;
-    width: 20.5%;
+    display: inherit;
+    /* width: 20.5%; */
   }
   footer p {
       margin: auto;
